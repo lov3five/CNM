@@ -1,6 +1,11 @@
 /*
   Author: @lov3five
-
+  * Device:
+    - Arduino Uno R3
+    - Gas sensor MQ135
+    - 1 RED led, 1 GREEN led
+    - 1 buzzer
+    - 1 coder :v
 */
 int RED_LED = 11; //Chân 11 Uno
 int GREEN_LED = 12; //Chân 11 Uno
@@ -54,9 +59,7 @@ void loop() {
   } else {
     digitalWrite(RED_LED, LOW);
     digitalWrite(BUZZER, LOW);
-    
+    //Led xanh sáng
     digitalWrite(GREEN_LED, HIGH);
   }
-
-
 }
