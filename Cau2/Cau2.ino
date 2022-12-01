@@ -42,6 +42,7 @@ void blinkLed3s(int pin) {
   digitalWrite(pin, HIGH);
   delay(1000);
   digitalWrite(pin, LOW);
+}
 
 void loop() {
   valueMQ135 =  analogRead(MQ_135); //Đọc giá trị nhận từ cảm biến MQ135 và gán vào valueMQ135
