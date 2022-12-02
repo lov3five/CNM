@@ -55,5 +55,6 @@ void loop() {
     digitalWrite(RED_PIN, HIGH);
     digitalWrite(BUZZER_PIN, HIGH);
   }
-
+  //Time lấy mẫu
+  delay(4000);
 }
