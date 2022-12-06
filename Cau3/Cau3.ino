@@ -5,7 +5,7 @@
 //Thư viện DHT
 #include <dht.h>
 //Khai báo hằng số chân Pin của DHT = A0
-#define dht_apin A0
+#define DHT_PIN A0
 dht DHT;
 
 int YELLOW_PIN = 11;
@@ -19,7 +19,7 @@ void setup() {
   pinMode(GREEN_PIN, OUTPUT);
   pinMode(RED_PIN, OUTPUT);
   pinMode(BUZZER_PIN, OUTPUT);
-  pinMode(dht_apin, INPUT);
+  pinMode(DHT_PIN, INPUT);
 
   //Setup tắt mặc định
   digitalWrite(YELLOW_PIN, LOW);
@@ -30,7 +30,7 @@ void setup() {
 
 void loop() {
   //Dùng read11 của thư viện DHT đọc đầu vào
-  DHT.read11(dht_apin);
+  DHT.read11(DHT_PIN);
 
   //Dùng temperature của thư viện DHT để đọc dữ liệu nhiệt độ
   Serial.print("Humidity = ");
@@ -58,8 +58,6 @@ void loop() {
     digitalWrite(YELLOW_PIN, LOW);
     digitalWrite(RED_PIN, HIGH);
     digitalWrite(BUZZER_PIN, HIGH);
-    delay(100); // Xóa cái này đi
-    digitalWrite(BUZZER_PIN, LOW);
   }
   //Time lấy mẫu
   delay(4000);
