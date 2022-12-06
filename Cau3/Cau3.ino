@@ -20,12 +20,6 @@ void setup() {
   pinMode(RED_PIN, OUTPUT);
   pinMode(BUZZER_PIN, OUTPUT);
   pinMode(DHT_PIN, INPUT);
-
-  //Setup tắt mặc định
-  digitalWrite(YELLOW_PIN, LOW);
-  digitalWrite(GREEN_PIN, LOW);
-  digitalWrite(RED_PIN, LOW);
-  digitalWrite(BUZZER_PIN, LOW);
 }
 
 void loop() {
