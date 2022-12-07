@@ -1,0 +1,1 @@
+""" Thu thập dữ liệu ở khu vực B """
