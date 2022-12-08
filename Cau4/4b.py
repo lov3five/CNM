@@ -2,6 +2,7 @@
 import RPi.GPIO as GPIO
 import time
 
+
 # Setmode BCM
 GPIO.setmode(GPIO.BCM)
 # Chân Pin cảm biến MQ135
