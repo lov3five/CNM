@@ -14,32 +14,20 @@ void setup() {
   pinMode(YELLOW_PIN, OUTPUT);
 }
 
+void ledLight(int pin, int duration) {
+  digitalWrite(pin, HIGH);
+  delay(duration*1000);
+  digitalWrite(pin, LOW);
+}
+
 void loop() {
-  //Đèn đỏ, đèn vàng tắt
-  digitalWrite(RED_PIN, LOW);
-  digitalWrite(YELLOW_PIN, LOW);
-
   //Đèn xanh sáng 6s
-  Serial.println("GREEN_LED turn on");
-  digitalWrite(GREEN_PIN, HIGH);
-  delay(6000); //6s
-
-  //Đèn đỏ,  đèn xanh tắt
-  digitalWrite(RED_PIN, LOW);
-  digitalWrite(GREEN_PIN, LOW);
-
+  ledLight(GREEN_PIN, 6);
   //Đèn vàng sáng 3s
-  Serial.println("YELLOW_LED turn on");
-  digitalWrite(YELLOW_PIN, HIGH);
-  delay(3000); //3s
-
-  //Đèn vàng, đèn xanh tắt
-  digitalWrite(YELLOW_PIN, LOW);
-  digitalWrite(GREEN_PIN, LOW);
-
+  ledLight(YELLOW_PIN, 3);
   //Đèn đỏ sáng 4s
-  Serial.println("RED_LED turn on");
-  digitalWrite(RED_PIN, HIGH);
+  ledLight(RED_PIN, 4);
+ 
   delay(4000); //4s
 
 }
